@@ -1,9 +1,11 @@
 from fpdf import FPDF
+import os
 
 def export_response_to_pdf(question: str, answer: str, context_chunks: list[str], filename: str = "response.pdf"):
     pdf = FPDF()
     pdf.add_page()
-    pdf.add_font('Arial', '', '../fonts/arial.ttf', uni=True)
+    font_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "fonts", "arial.ttf"))
+    pdf.add_font('Arial', '', font_path, uni=True)
     pdf.set_font("Arial", size=12)
 
     pdf.multi_cell(0, 10, f"Question:\n{question}\n\n", align='L')

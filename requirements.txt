@@ -4,7 +4,7 @@ faiss-cpu
 pdfplumber
 python-dotenv
 fpdf
-"unstructured[pdf]"
+unstructured[pdf]
 scikit-learn
 numpy
 pdfminer.six

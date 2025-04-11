@@ -35,8 +35,13 @@ Thumbs.db
 # ---------------------
 # Project-specific folders
 # ---------------------
-/exports/           # Generated Word/PDF files
-/data/rfps/         # Uploaded RFPs
-/data/past_responses/  # Indexed proposals
+/exports/                       # Generated Word/PDF files
+/data/past_responses/          # Indexed proposals
+/data/rfps/*                   # Ignore all RFPs...
+!/data/rfps/rfp-managed-it-servicedocx.pdf  # ...except demo files
+!/data/rfps/tender_1.pdf
 
+# ---------------------
+# Secrets
+# ---------------------
 .env

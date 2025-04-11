@@ -1,7 +1,12 @@
 from typing import List, Tuple
 from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer, LTChar
-from unstructured.partition.pdf import partition_pdf
+
+try:
+    from unstructured.partition.pdf import partition_pdf
+except ImportError:
+    partition_pdf = None
+
 import streamlit as st
 import re
 
@@ -88,6 +93,10 @@ def classify_blocks(blocks: List[Tuple[float, float, str]], bold_supported: bool
 # 3. Fallback using unstructured
 # ------------------------------------------
 def unstructured_fallback(pdf_path: str) -> List[Tuple[str, str]]:
+    if partition_pdf is None:
+        print("[Warning] 'unstructured' not available. Using basic fallback.")
+        return [("Untitled Section", "[Unable to parse this document in current environment.]")]
+
     elements = partition_pdf(filename=pdf_path)
     chunks = []
     current_title = "Untitled Section"

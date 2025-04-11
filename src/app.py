@@ -20,7 +20,7 @@ uploaded_file = st.file_uploader("Upload a tender PDF", type=["pdf"])
 
 # Auto-load demo tender if no file uploaded
 if not uploaded_file:
-    demo_path = os.path.join("data", "rfps", "rfp-managed-it-servicedocx.pdf")
+    demo_path = os.path.join("..","data", "rfps", "rfp-managed-it-servicedocx.pdf")
     if os.path.exists(demo_path):
         with open(demo_path, "rb") as f:
             uploaded_file = f

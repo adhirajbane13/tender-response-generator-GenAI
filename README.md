@@ -140,7 +140,7 @@ Main packages used:
 
 ## Challenges Solved
 
-- Handling diverse PDF layouts with varying header structures  
+- Generalizing by handling diverse PDF layouts with varying header structures  
 - Extracting logical sections using font-size + bold detection fallback  
 - Preventing slowdowns with **smart caching** for repeat uploads  
 - Supporting **multiple tender file uploads** with toggling  

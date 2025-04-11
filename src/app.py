@@ -59,7 +59,7 @@ try:
         )
 
         st.markdown("#### ⚙️ Model Settings")
-        temperature = st.slider("🎛️ Response Creativity", 0.0, 1.0, 0.2, 0.1)
+        temperature = st.slider("🎛️ Response Creativity", 0.0, 2.0, 0.2, 0.2)
 
         st.markdown("#### 📝 Instructions")
         st.markdown(

@@ -26,7 +26,7 @@ Responding to tenders is time-consuming and requires navigating long, jargon-fil
 
 ---
 
-## Key Features
+### Key Features
 
 - Upload and toggle between **multiple tender PDFs**
 - **Natural language Q&A** powered by GPT-4
@@ -34,20 +34,24 @@ Responding to tenders is time-consuming and requires navigating long, jargon-fil
 - Uses **OpenAI embeddings + FAISS** for fast and accurate semantic search
 - Export answers as a PDF
 - Mobile-friendly layout with responsive styling
-- Adjustable temperature to control response **creativity vs. precision**
 - Smart caching to avoid reprocessing already-uploaded tenders
+- **Adjustable Answer Style (Temperature Control)**  
+  Control how *precise* or *creative* the assistant should be:
+  - **Lower temperature (e.g., 0.2):** Confident, factual, and grounded answers like “The document does not contain this information.”
+  - **Higher temperature (e.g., 0.7+):** More human-like intuition — deeper guesses or inferred insights even if details are scattered.  
+    > *Example: “The document does not contain specific dates for the contract to start and end. However, the initial contract is stated to last for 36 months, with the option to extend it an additional 24 months upon mutual agreement…”*
 
 ---
 
-## Technology Behind the Scenes
+### Technology Behind the Scenes
 
-### OpenAI Embeddings (text-embedding-3-small)
+#### OpenAI Embeddings (text-embedding-3-small)
 > A model that transforms each chunk of the tender document into a dense vector (semantic representation), enabling deep understanding of meaning beyond keyword matching.
 
-### FAISS (Facebook AI Similarity Search)
+#### FAISS (Facebook AI Similarity Search)
 > A powerful vector database that allows fast similarity searches across all embedded chunks — used to find the most relevant sections for your query.
 
-Together, they create a retrieval-augmented generation (RAG) system where relevant content is first retrieved, then passed to **GPT-4** to formulate grounded and accurate responses.
+Together, they create a **retrieval-augmented generation (RAG)** system: relevant content is retrieved first, then passed to GPT-4 to formulate grounded, context-aware responses — with an optional **temperature slider** to tweak the reasoning style from literal to intuitive.
 
 ---
 

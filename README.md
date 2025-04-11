@@ -1,6 +1,6 @@
 # Tender Intelligence Assistant
 
-**Instantly understand complex tender PDFs with AI-powered question answering and semantic document insights.**
+**Instantly understand complex tender/RFP PDFs with AI-powered question answering and semantic document insights.**
 
 This tool allows businesses, procurement teams, and consultants to upload tender documents (PDFs), ask natural language questions, and get structured, intelligent answers instantly — with supporting context extracted from the document itself.
 

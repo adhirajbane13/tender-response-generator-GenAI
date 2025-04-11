@@ -1,8 +1,10 @@
-openai 
-streamlit 
-langchain 
+streamlit
+openai
 faiss-cpu
 pdfplumber
-python-docx 
-docx2txt
-pdfkit
+python-dotenv
+fpdf
+unstructured
+scikit-learn
+numpy
+pdfminer.six

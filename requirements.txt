@@ -1,0 +1,8 @@
+openai 
+streamlit 
+langchain 
+faiss-cpu
+pdfplumber
+python-docx 
+docx2txt
+pdfkit

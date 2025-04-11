@@ -1,0 +1,42 @@
+# ---------------------
+# Python
+# ---------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+
+# ---------------------
+# Conda / Virtual Environments
+# ---------------------
+.venv/
+env/
+*.conda
+*.yml
+
+# ---------------------
+# Streamlit
+# ---------------------
+.streamlit/
+
+# ---------------------
+# VSCode / IDE stuff
+# ---------------------
+.vscode/
+.idea/
+*.swp
+
+# ---------------------
+# System / OS Files
+# ---------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------
+# Project-specific folders
+# ---------------------
+/exports/           # Generated Word/PDF files
+/data/rfps/         # Uploaded RFPs
+/data/past_responses/  # Indexed proposals
+
+.env

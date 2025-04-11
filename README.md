@@ -140,12 +140,12 @@ Main packages used:
 
 ## Challenges Solved
 
-Handling diverse PDF layouts with varying header structures  
-Extracting logical sections using font-size + bold detection fallback  
-Preventing slowdowns with **smart caching** for repeat uploads  
-Supporting **multiple tender file uploads** with toggling  
-Exporting AI responses to a **clean, downloadable PDF**  
-Making the app **mobile-friendly** and **easy to demo**
+- Handling diverse PDF layouts with varying header structures  
+- Extracting logical sections using font-size + bold detection fallback  
+- Preventing slowdowns with **smart caching** for repeat uploads  
+- Supporting **multiple tender file uploads** with toggling  
+- Exporting AI responses to a **clean, downloadable PDF**  
+- Making the app **mobile-friendly** and **easy to demo**
 
 ---
 

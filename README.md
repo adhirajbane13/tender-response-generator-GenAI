@@ -43,15 +43,38 @@ Responding to tenders is time-consuming and requires navigating long, jargon-fil
 
 ---
 
+Absolutely — let’s expand each of these to give a clearer, more business-friendly picture of how they power your Tender Intelligence Assistant, while still keeping it engaging and digestible for a wider audience:
+
+---
+
 ### Technology Behind the Scenes
 
-#### OpenAI Embeddings (text-embedding-3-small)
-> A model that transforms each chunk of the tender document into a dense vector (semantic representation), enabling deep understanding of meaning beyond keyword matching.
+#### **OpenAI Embeddings (text-embedding-3-large)**
+This model plays a crucial role in "understanding" the tender document. It breaks the document into smaller sections (or chunks) and transforms each chunk into a **semantic vector** — a mathematical representation of the *meaning* behind the text.  
+Unlike traditional keyword search, this allows the assistant to grasp **concepts**, **topics**, and **context**, even when the user’s question is worded differently from the original tender phrasing.
 
-#### FAISS (Facebook AI Similarity Search)
-> A powerful vector database that allows fast similarity searches across all embedded chunks — used to find the most relevant sections for your query.
+*For example, even if a document mentions “termination clauses” and the user asks “what happens if the contract ends early?”, embeddings help the system recognize this is the same idea or rather technically similar.*
 
-Together, they create a **retrieval-augmented generation (RAG)** system: relevant content is retrieved first, then passed to GPT-4 to formulate grounded, context-aware responses — with an optional **temperature slider** to tweak the reasoning style from literal to intuitive.
+---
+
+#### **FAISS (Facebook AI Similarity Search)**
+Once the document is semantically embedded, FAISS comes into action as the **search engine**. It performs fast, intelligent retrieval of the **most relevant chunks** for any given question — not by matching exact words, but by calculating how "close" the meanings are.
+
+This enables:
+- **Lightning-fast answers**, even across long documents
+- **Pinpoint accuracy**, surfacing only the parts of the tender that actually matter
+- A smarter system that feels more like asking a human expert than reading a PDF
+
+---
+
+#### **Bringing it Together: Retrieval-Augmented Generation (RAG)**
+With embeddings powering understanding and FAISS powering relevance, the assistant uses a **RAG pipeline** to generate responses. It:
+1. Retrieves the best-matching chunks of the tender
+2. Sends them to **GPT-4**, which crafts a natural, helpful answer based *only* on that context
+
+And for even more flexibility, users can tune the **temperature slider** to adjust:
+- *Low temperature (0.2)* -> “Just the facts, please”
+- *High temperature (0.7+)* -> “Think like a human analyst — even if the answer isn't obvious”
 
 ---
 

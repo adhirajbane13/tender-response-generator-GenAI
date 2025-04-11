@@ -43,10 +43,6 @@ Responding to tenders is time-consuming and requires navigating long, jargon-fil
 
 ---
 
-Absolutely — let’s expand each of these to give a clearer, more business-friendly picture of how they power your Tender Intelligence Assistant, while still keeping it engaging and digestible for a wider audience:
-
----
-
 ### Technology Behind the Scenes
 
 #### **OpenAI Embeddings (text-embedding-3-large)**

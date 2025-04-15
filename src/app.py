@@ -23,7 +23,7 @@ try:
 
     st.set_page_config(page_title="Tender Intelligence", layout="wide")
     
-    # 📱 Mobile-friendly CSS
+    #  Mobile-friendly CSS
     st.markdown("""
         <style>
         /* Global scaling for mobile */
